@@ -1,5 +1,9 @@
-<a href="/" title="Go to Home">Home</a>
-<a href="/about" title="Go to About">About</a>
-<a href="#">Another one</a>
-<a href="#">One more, why not?</a>
-<a href="#">Last one, i promise :)</a>
+{{#navigation}}
+    <form class="nav-search" action="{{search_url}}" method="GET">
+        <input type="search" name="s" placeholder="Search">
+    </form>
+
+    {{#each items}}
+        <a href="{{url link}}">{{label}}</a>
+    {{/each}}
+{{/navigation}}
