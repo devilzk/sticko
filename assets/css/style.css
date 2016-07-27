@@ -60,14 +60,18 @@ a {
     font-family: "Nexa Bold","Helvetica Neue",Helvetica,sans-serif,Helvetica,sans-serif;
 }
 
-p,pre,.post img {
+p,pre {
     margin: 0 0 1em;
 }
 
-pre,.post img,.pre-like {
+pre,.pre-like {
     padding: 1em;
     background: #ebebeb;
     border: 1px dashed #dadada;
+}
+
+.post img {
+    margin: 0;
 }
 
 strong {
@@ -359,7 +363,6 @@ body.nav-open {
 
 .post-header {
     margin-bottom: 3.125em;
-    overflow: hidden;
 }
 
 .post-meta {
@@ -445,6 +448,46 @@ body.nav-open {
 #main-footer a {
     font-family: "Nexa Bold","Helvetica Neue",Helvetica,sans-serif,Helvetica,sans-serif;
     color: #f0f0f0;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////
+// Required classes for alignment. We need these because Postleaf generates classes
+// instead of inline styles for alignment.
+//////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+img.align-left,
+[data-embed].align-left {
+    float: left;
+    margin-right: 1em;
+}
+
+img.align-center,
+[data-embed].align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.align-right,
+[data-embed].align-right {
+    float: right;
+    margin-left: 1em;
 }
 
 @media screen and (max-width: 1023px) {
