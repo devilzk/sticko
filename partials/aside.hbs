@@ -4,27 +4,12 @@
         <button class="nav-control"><i class="icon-hamburguer"></i></button>
         {{> nav}}
     </nav>
-    <div class="logo"><a href="/" title="Back to home">{{@settings.title}}</a></div>
-
+    <div class="logo"><a href="{{url}}" title="Back to home">{{#if @settings.logo}}<img src="{{url @settings.logo}}" alt="Back to home"/>{{else}}{{@settings.title}}{{/if}}</a></div>
     {{!-- Blog index, search, error, pages --}}
     {{#is @template 'in' 'blog,page,search,error'}}
         <div class="aside-content">
             <header class="aside-title">{{@settings.tagline}}</header>
         </div>
-    {{/is}}
-
-    {{!-- Posts --}}
-    {{#is @template 'post'}}
-        {{#author}}
-            <div class="aside-content">
-                {{#if avatar}}
-                    <figure class="aside-image"><img class="avatar-image" src="{{url avatar}}" alt="Avatar"></figure>
-                {{/if}}
-                <header class="aside-title">{{name}}</header>
-                <p class="aside-description">{{bio}}</p>
-                {{#if location}}<p><small>{{location}}</small></p>{{/if}}
-            </div>
-        {{/author}}
     {{/is}}
 
     {{!-- Authors --}}
@@ -37,6 +22,14 @@
                 <header class="aside-title">{{name}}</header>
                 <p class="aside-description">{{bio}}</p>
             </div>
+            {{#if image}}
+                <a href="{{post_url}}" class="post-image">
+                    <img src="{{url image}}" alt="">
+                    <h2 class="post-title">{{{title}}}</h2>
+                </a>
+            {{else}}
+                <h2 class="post-title"><a href="{{post_url}}">{{{title}}}</a></h2>
+            {{/if}}
         {{/author}}
     {{/is}}
 
@@ -66,10 +59,10 @@
         <a href="#" class="icon-lastfm" rel="external" title="My Lastfm"></a>
         <a href="#" class="icon-rdio" rel="external" title="My Rdio"></a>
         <a href="#" class="icon-youtube" rel="external" title="My YouTube"></a>
-        <a href="#" class="icon-mail" rel="external" title="My Mail"></a> -->
+        <a href="#" class="icon-mail" rel="external" title="My Mail"></a>
+		<a href="{{feed_url}}" class="icon-feed" rel="external" title="RSS Feed"></a>
         --}}
-        <a href="{{feed_url}}" class="icon-feed" rel="external" title="RSS Feed"></a>
     </menu>
 
-    <footer id="main-footer"><p>Free <a href="https://www.postleaf.org/" title="Postleaf" rel="external">Postleaf</a> theme originally designed by <a href="https://twitter.com/damianmuti" title="Go to @damianmuti's Twitter" rel="external">@damianmuti</a></p></footer>
+    <footer id="main-footer"><p>Hello</p></footer>
 </section>

@@ -1,9 +1,9 @@
-Sticko - A fork of the Sticko Ghost theme by @damianmuti.
+Sticko Night - A fork of the Sticko Ghost theme by @damianmuti.
 =======
 
 ## About
 
-This version of Sticko has been forked from [Damián Muti’s original design](http://sticko.damianmuti.com/) to run on Postleaf.
+This version of Sticko has been forked from [Damián Muti’s original design](http://sticko.damianmuti.com/) to run on Postleaf and has undergone a dark restyling.
 
 ---
 

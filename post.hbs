@@ -2,9 +2,9 @@
 {{> header}}
 
 {{#post}}
-
+<!-- Handles sidebar image/cover image/post image -->
 <div id="main-content" role="main" class="pure-g-r">
-    <aside id="main-sidebar" class="pure-u-1-2"{{#if @settings.cover}} style="background-image:url({{url @settings.cover}})"{{/if}}>
+    <aside id="main-sidebar" class="pure-u-1-2"{{#if image}} style="background-image:url({{url image}})"{{else if @settings.cover}} style="background-image:url({{url @settings.cover}})"{{/if}}>
         {{> aside}}
     </aside>
 
@@ -18,6 +18,19 @@
                 {{content editable="true"}}
             </div>
         </article>
+	{{!-- Posts --}}
+    {{#is @template 'post'}}
+        {{#author}}
+            <div class="aside-content">
+                {{#if avatar}}
+                    <figure class="aside-image"><img class="avatar-image" src="{{url avatar}}" alt="Avatar"></figure>
+                {{/if}}
+                <header class="aside-title">{{name}}</header>
+                <p class="aside-description">{{bio}}</p>
+                {{#if location}}<p><small>{{location}}</small></p>{{/if}}
+            </div>
+        {{/author}}
+    {{/is}}
     </section>
 </div>
 

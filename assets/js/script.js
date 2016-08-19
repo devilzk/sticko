@@ -24,3 +24,15 @@ $(window).load(function(){
 	$('.spinner').hide();
 
 });
+
+// Load highlight.js first!
+
+$(function() {
+    // You may or may not need this
+    hljs.configure({useBR: true});
+
+    // Highlight all pre elements on the page
+    $('pre').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+});

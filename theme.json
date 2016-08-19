@@ -1,9 +1,9 @@
 {
-    "name": "Sticko",
-    "description": "A fork of the Sticko Ghost theme by @damianmuti.",
+    "name": "Sticko Night",
+    "description": "A fork of the converted Sticko Ghost theme by @damianmuti.",
     "version": "0.0.0",
     "requires": "1.0.0",
-    "author": "Cory LaViska",
+    "author": "Devilzk",
     "license": "CCA 4.0",
-    "url": "https://github.com/postleaf/sticko"
+    "url": "https://github.com/devilzk/sticko-night"
 }
