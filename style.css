@@ -25,10 +25,13 @@ p {
 	color: #555;
 }
 
-/* Code background */
+/* Code */
 code {
 	color: #bd4147;
 	background: rgba(255,255,255,.05);
+	padding: .2rem .4rem;
+    font-size: 90%;
+    border-radius: .25rem;
 }
 
 /* Syntax Highlighting colors */
