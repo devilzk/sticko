@@ -10,7 +10,7 @@ p {
 }
 
 /* Outline in editor */
-[data-postleaf-type=post-content]:hover, [data-postleaf-type=post-title]:hover {
+[data-postleaf-type=post-content]:hover, [data-postleaf-type=post-title]:hover, [data-postleaf-type=post-content]:focus, [data-postleaf-type=post-title]:focus {
     outline-color: rgba(255,255,255,.25) !important;
 }
 [data-postleaf-type=post-content], [data-postleaf-type=post-title] {
